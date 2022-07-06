@@ -1,0 +1,69 @@
+local ScreenGui = Instance.new("ScreenGui")
+local Main = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local Toggle = Instance.new("TextButton")
+local CreditsxXCloudyXxonYT8684 = Instance.new("TextLabel")
+
+--Properties:
+
+ScreenGui.Parent = game.CoreGui
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Main.Name = "Main"
+Main.Parent = ScreenGui
+Main.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Main.Position = UDim2.new(0.0413105413, 0, 0.164989933, 0)
+Main.Size = UDim2.new(0, 147, 0, 299)
+Main.Active = true
+Main.Draggable = true
+Main.Style = Enum.FrameStyle.ChatRed
+
+TextLabel.Parent = Main
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.Position = UDim2.new(-0.0688831583, 0, -0.0594084896, 0)
+TextLabel.Size = UDim2.new(0, 135, 0, 50)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "Aimbot"
+TextLabel.TextColor3 = Color3.fromRGB(17, 0, 255)
+TextLabel.TextSize = 40.000
+
+Toggle.Name = "Toggle"
+Toggle.Parent = Main
+Toggle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Toggle.Position = UDim2.new(-0.0793227702, 0, 0.33264482, 0)
+Toggle.Size = UDim2.new(0, 139, 0, 65)
+Toggle.Font = Enum.Font.SourceSans
+Toggle.Text = "Off"
+Toggle.TextColor3 = Color3.fromRGB(255, 0, 0)
+Toggle.TextSize = 40.000
+
+CreditsxXCloudyXxonYT8684.Name = "Credits xXCloudyXxonYT#8684"
+CreditsxXCloudyXxonYT8684.Parent = Main
+CreditsxXCloudyXxonYT8684.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CreditsxXCloudyXxonYT8684.Position = UDim2.new(-0.0808961838, 0, 0.86231792, 0)
+CreditsxXCloudyXxonYT8684.Size = UDim2.new(0, 139, 0, 52)
+CreditsxXCloudyXxonYT8684.Font = Enum.Font.SourceSans
+CreditsxXCloudyXxonYT8684.Text = "Credits xXCloudyXxonYT#8684"
+CreditsxXCloudyXxonYT8684.TextColor3 = Color3.fromRGB(0, 0, 0)
+CreditsxXCloudyXxonYT8684.TextSize = 12.000
+
+-- Scripts:
+
+local function GOGQI_fake_script() -- Toggle.LocalScript 
+	local script = Instance.new('LocalScript', Toggle)
+
+	_G.aimbot = false
+	script.Parent.MouseButtton1Click:Connect(function()
+		if _G.aimbot  == false then
+			_G.aimbot == true
+			script.Parent.TextColor3 = Color3.fromRBG (0, 190, 0)
+			script.Parent.Text = "On"
+		else
+			_G.aimbot = false
+			script.Parent.TextColor3 = Color3.fromRBG (255, 0, 0)
+			script.Parent.Text = "Off"
+		end
+	end)
+	
+end
+coroutine.wrap(GOGQI_fake_script)()
