@@ -12,8 +12,8 @@ local MyView = Area.CurrentCamera
 local MyTeamColor = LocalPlayer.TeamColor
 local HoldingM2 = false
 local Active = false
-local Lock = true
-local Epitaph = 050 ---Note: The Bigger The Number, The More Prediction.
+local Lock = false
+local Epitaph = 5 ---Note: The Bigger The Number, The More Prediction.
 local HeadOffset = Vector3.new(0, .1, 0)
 
 _G.TeamCheck = false
